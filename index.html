@@ -17,21 +17,47 @@
 
   </head>
   <body>
-    <div class="container-box">
-        <div class="hero-img">
-            <img src="https://res.cloudinary.com/think-makers-asylum/image/upload/v1630562587/65684369-sticks-word-made-from-red-foil-balloons-3d-rendered-can-be-used-for-an-online-banner-ad-or-a-print-p_nz5fhz-removebg-preview_esgkte.png"
-            class="img-fluid img-responsive" alt="logo">
+      <div class="search-div">
+
+        <div class="container-box">
+            <div class="hero-img">
+                <img src="https://res.cloudinary.com/think-makers-asylum/image/upload/e_brightness:-21/v1630592868/stick_logo_i3z0mi.png"
+                class="img-fluid img-responsive" alt="logo">
+            </div>
+            <div class="input">
+                <form action="" method="post">
+                    
+                    <input class="input-search" type="text">
+                    <button class="search"><span class="search-icon fas fa-search"></span></button>
+                </form>
+            </div>
         </div>
-        <div class="input">
-            <form action="" method="post">
-                
-                <input class="input-search" type="text">
-                <button class="search"><span class="search-icon fas fa-search"></span></button>
-            </form>
+  </div>
+    
+
+    <div class="social-meida-box">
+        <ul class="social-meida-list">
+            <li><a href="#"> <i class="facebook fab fa-facebook"></i></a></li>
+            <li><a href="#"> <i class="linkedin-in fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"> <i class="instagram fab fa-instagram"></i></a></li>
+            <li><a href="#"> <i class="whatsapp fab fa-whatsapp"></i></a></li>
+            <li><a href="#"> <i class="github fab fa-github"></i></a></li>
+        </ul>
+
+        <div class="social-media-hr">
+            <hr>
         </div>
+        
     </div>
 
     <script>
+
+        let facebookIcon = document.querySelector('.facebook');
+        facebookIcon.addEventListener('hover', (e) => {
+            let body = document.querySelector('body');
+            body.style.background = '#1877f2';
+            body.style.backgroundImage = null;
+        })
         
         var input = document.querySelector(".input-search");
         input.addEventListener("keyup", function(event) {
@@ -50,7 +76,6 @@
             
         }
 
-        
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
