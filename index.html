@@ -37,11 +37,11 @@
 
     <div class="social-meida-box">
         <ul class="social-meida-list">
-            <li><a href="#"> <i class="facebook fab fa-facebook"></i></a></li>
-            <li><a href="#"> <i class="linkedin-in fab fa-linkedin-in"></i></a></li>
-            <li><a href="#"> <i class="instagram fab fa-instagram"></i></a></li>
-            <li><a href="#"> <i class="whatsapp fab fa-whatsapp"></i></a></li>
-            <li><a href="#"> <i class="github fab fa-github"></i></a></li>
+            <li><a href="#"> <i id="Facebook" onmouseover="otherfunction(facebookIcon, 'Facebook')" onmouseout="anotherfunction(facebookIcon)" class="facebook fab fa-facebook"></i></a></li>
+            <li><a href="#"> <i id="Linkedin" onmouseover="otherfunction(linkedinIcon, 'Linkedin')" onmouseout="anotherfunction(linkedinIcon)" class="linkedin-in fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"> <i id="Instagram" onmouseover="otherfunction(instagramIcon, 'Instagram')" onmouseout="anotherfunction(instagramIcon)" class="instagram fab fa-instagram"></i></a></li>
+            <li><a href="#"> <i id="Whatsapp" onmouseover="otherfunction(whatsappIcon, 'Whatsapp')" onmouseout="anotherfunction(whatsappIcon)" class="whatsapp fab fa-whatsapp"></i></a></li>
+            <li><a href="#"> <i id="Github" onmouseover="otherfunction(githubIcon, 'Github')" onmouseout="anotherfunction(githubIcon)" class="github fab fa-github"></i></a></li>
         </ul>
 
         <div class="social-media-hr">
@@ -52,12 +52,38 @@
 
     <script>
 
+
         let facebookIcon = document.querySelector('.facebook');
-        facebookIcon.addEventListener('hover', (e) => {
-            let body = document.querySelector('body');
-            body.style.background = '#1877f2';
-            body.style.backgroundImage = null;
+        let linkedinIcon = document.querySelector('.linkedin-in');
+        let instagramIcon = document.querySelector('.instagram');
+        let whatsappIcon = document.querySelector('.whatsapp');
+        let githubIcon = document.querySelector('.github');
+        
+
+        let otherfunction = ( iconName, name ) => {
+            iconName.addEventListener('mouseover', (e) => {
+            var input = document.querySelector(".input-search");
+            input.placeholder = name;
         })
+        }
+
+        let anotherfunction = (iconName) => {
+            iconName.addEventListener('mouseout', (e) => {
+            var input = document.querySelector(".input-search");
+            input.placeholder = "";
+        })
+        }
+
+        
+        // facebookIcon.addEventListener('mouseover', (e) => {
+        //     var input = document.querySelector(".input-search");
+        //     input.placeholder = "Facebook";
+        // })
+
+        
+
+        
+
         
         var input = document.querySelector(".input-search");
         input.addEventListener("keyup", function(event) {
@@ -71,7 +97,7 @@
         
         function myFunction(event) {
             const input = document.querySelector('.input-search').value;
-            window.location = 'https://www.bing.com/search?q=' + input;
+            window.location = 'https://www.google.com/search?q=' + input;
             event.preventDefault();
             
         }
